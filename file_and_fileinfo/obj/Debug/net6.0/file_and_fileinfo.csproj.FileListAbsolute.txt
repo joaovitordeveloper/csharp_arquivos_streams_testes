@@ -1,0 +1,15 @@
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\bin\Debug\net6.0\file_and_fileinfo.exe
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\bin\Debug\net6.0\file_and_fileinfo.deps.json
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\bin\Debug\net6.0\file_and_fileinfo.runtimeconfig.json
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\bin\Debug\net6.0\file_and_fileinfo.dll
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\bin\Debug\net6.0\file_and_fileinfo.pdb
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.csproj.AssemblyReference.cache
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.AssemblyInfoInputs.cache
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.AssemblyInfo.cs
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.dll
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\refint\file_and_fileinfo.dll
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.pdb
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\file_and_fileinfo.genruntimeconfig.cache
+C:\xampp\htdocs\csharp_arquivos_streams_testes\file_and_fileinfo\obj\Debug\net6.0\ref\file_and_fileinfo.dll
