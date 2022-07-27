@@ -1,40 +1,48 @@
 ﻿using static System.Console;
 
-WriteLine("Digite o nome do arquivo:");
-var nome = ReadLine();
-nome = LimparNome(nome);
-//criando um arquivos
 
-var path = Path.Combine(Environment.CurrentDirectory, $"{nome}.txt");
-CriarArquivo(path);
-
-WriteLine("Pressione Enter para continuar...");
-ReadLine();
-static void CriarArquivo(string path)
+static void CriarArquivo2()
 {
-  try
-  {
-    using var sw = File.CreateText(path);
-    //escrever no arquivo
-    sw.WriteLine("Esta e a linha 1");
-    sw.WriteLine("Esta e a linha 2");
-    sw.WriteLine("Esta e a linha 3");
-    //faz a descarga dakilo que esta em memoria
-  }
-  catch
-  {
-    WriteLine("O nome do arquivo esta invalido");
+    WriteLine("Digite o nome do arquivo:");
 
-  }
+    var nome = ReadLine();
 
+    nome = LimparNome(nome);
+
+    var path = Path.Combine(Environment.CurrentDirectory, $"{nome}.txt");
+
+    CriarArquivo(path);
+
+    WriteLine("Digite enter para finalizar...");
+    ReadLine();
 }
 
 static string LimparNome(string nome)
 {
-  foreach (var @char in Path.GetInvalidFileNameChars())
-  {
-    nome = nome.Replace(@char, '-');
-  }
-  return nome;
+    foreach (var @char in Path.GetInvalidFileNameChars())
+    {
+        nome = nome.Replace(@char, '-');
+    }
+    return nome;
 }
+
+static void CriarArquivo(string path)
+{
+    try
+    {
+        using var sw = File.CreateText(path);
+        sw.WriteLine("Esta a linha 1 do arquivo");
+        sw.WriteLine("Esta a linha 2 do arquivo");
+        sw.WriteLine("Esta a linha 3 do arquivo");
+    }
+    catch
+    {
+
+        WriteLine("O nome do arquivo está inválido!");
+    }
+
+}
+
+
+
 

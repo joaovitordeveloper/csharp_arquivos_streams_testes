@@ -1,5 +1,0 @@
-C:\xampp\htdocs\csharp_arquivos_streams_testes\FileSystemWatcher\obj\Debug\net6.0\FileSystemWatcher.csproj.AssemblyReference.cache
-C:\xampp\htdocs\csharp_arquivos_streams_testes\FileSystemWatcher\obj\Debug\net6.0\FileSystemWatcher.GeneratedMSBuildEditorConfig.editorconfig
-C:\xampp\htdocs\csharp_arquivos_streams_testes\FileSystemWatcher\obj\Debug\net6.0\FileSystemWatcher.AssemblyInfoInputs.cache
-C:\xampp\htdocs\csharp_arquivos_streams_testes\FileSystemWatcher\obj\Debug\net6.0\FileSystemWatcher.AssemblyInfo.cs
-C:\xampp\htdocs\csharp_arquivos_streams_testes\FileSystemWatcher\obj\Debug\net6.0\FileSystemWatcher.csproj.CoreCompileInputs.cache

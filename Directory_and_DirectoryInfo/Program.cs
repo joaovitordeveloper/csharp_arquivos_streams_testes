@@ -1,81 +1,105 @@
-﻿
-CriarDiretorioGlobo();
-CriarArquivo();
-
-var origem = Path.Combine(Environment.CurrentDirectory, "brasil.txt");
-var destino = Path.Combine(Environment.CurrentDirectory, "globo", "América do sul", "brasil", "brasil.txt");
-
+﻿// CriarDiretoriosGlobo();
+// CriarArquivo();
+// var origem = Path.Combine(Environment.CurrentDirectory, "brasil.txt");
+// var destino = Path.Combine(Environment.CurrentDirectory,
+//                                 "globo",
+//                                 "América do Sul",
+//                                 "Argentina",
+//                                 "argentina.txt");
 //MoverArquivo(origem, destino);
-CopiarArquivo(origem, destino);
+// CopiarArquivo(origem,destino);
+
+var path = Path.Combine(Environment.CurrentDirectory,"globo");
+//LerDiretorios(path);
+
+
+
+
+static void LerDiretorios(string path)
+{
+   var diretorios = Directory.GetDirectories(path,"*",SearchOption.AllDirectories);
+   foreach (var diretorio in diretorios)
+   {
+       var dirInfo = new DirectoryInfo(diretorio);
+       Console.WriteLine($"[Nome]:{dirInfo.Name}");
+       Console.WriteLine($"[Raiz]:{dirInfo.Root}");
+       if(dirInfo.Parent != null)
+        Console.WriteLine($"[Pai]:{dirInfo.Parent.Name}");
+
+        Console.WriteLine("---------------------");
+
+   }
+}
+
 
 static void CopiarArquivo(string pathOrigem, string pathDestino)
 {
-  // if (!File.Exists(pathOrigem))
-  // {
-  //   System.Console.WriteLine("O arquivo de origem não existe:");
-  //   return;
-  // }
-
-
-  // if (File.Exists(pathDestino))
-  // {
-  //   System.Console.WriteLine("O arquivo ja existe no destino:");
-  //   return;
-  // }
-
-  File.Copy(pathOrigem, pathDestino);
+    if (!File.Exists(pathOrigem))
+    {
+        Console.WriteLine("Arquivo de origem não existe");
+        return;
+    }
+    if (File.Exists(pathDestino))
+    {
+        Console.WriteLine("Arquivo já existe na pasta de destino");
+        return;
+    }
+    File.Copy(pathOrigem,pathDestino);
 }
-
 static void MoverArquivo(string pathOrigem, string pathDestino)
 {
-  if (!File.Exists(pathOrigem))
-  {
-    System.Console.WriteLine("O arquivo de origem não existe:");
-    return;
-  }
+    if (!File.Exists(pathOrigem))
+    {
+        Console.WriteLine("Arquivo de origem não existe");
+        return;
+    }
+    if (File.Exists(pathDestino))
+    {
+        Console.WriteLine("Arquivo já existe na pasta de destino");
+        return;
+    }
 
 
-  if (File.Exists(pathDestino))
-  {
-    System.Console.WriteLine("O arquivo ja existe no destino:");
-    return;
-  }
-
-  File.Move(pathOrigem, pathDestino);
+    File.Move(pathOrigem, pathDestino);
 }
-
 static void CriarArquivo()
 {
-  var path = Path.Combine(Environment.CurrentDirectory, "brasil.txt");
-  if (!File.Exists(path))
-  {
-    using var sw = File.CreateText(path);
-    sw.WriteLine("População: 200MM");
-    sw.WriteLine("IDH: 0,901");
-    sw.WriteLine("Dados atualizados em: 20/05/2021");
-  }
-}
+    var path = Path.Combine(Environment.CurrentDirectory, "brasil.txt");
+    if (!File.Exists(path))
+    {
+        using var sw = File.CreateText(path);
+        sw.WriteLine("População: 213MM");
+        sw.WriteLine("IDH: 0,901");
+        sw.WriteLine("Dados atualizados em: 20/04/2018");
+    }
 
-static void CriarDiretorioGlobo()
+}
+static void CriarDiretoriosGlobo()
 {
-  var path = Path.Combine(Environment.CurrentDirectory, "globo");
-  //criando um diretorio
-  if (!Directory.Exists(path))
-  {
-    var dirGlob = Directory.CreateDirectory(path);
-    var dirAmCentral = dirGlob.CreateSubdirectory("América central");
-    var dirAmNorte = dirGlob.CreateSubdirectory("América do norte");
-    var dirAmSul = dirGlob.CreateSubdirectory("América do sul");
 
-    dirAmNorte.CreateSubdirectory("USA");
-    dirAmNorte.CreateSubdirectory("Mexico");
-    dirAmNorte.CreateSubdirectory("Canada");
+    var path = Path.Combine(Environment.CurrentDirectory, "globo");
+    if (!Directory.Exists(path))
+    {
+        var dirGlogo = Directory.CreateDirectory(path);
+        var dirAmNorte = dirGlogo.CreateSubdirectory("América do Norte");
+        var dirAmCentral = dirGlogo.CreateSubdirectory("América Central");
+        var dirAmSul = dirGlogo.CreateSubdirectory("América do Sul");
 
-    dirAmCentral.CreateSubdirectory("Costa Rica");
-    dirAmCentral.CreateSubdirectory("Panama");
+        dirAmNorte.CreateSubdirectory("USA");
+        dirAmNorte.CreateSubdirectory("Mexico");
+        dirAmNorte.CreateSubdirectory("Canada");
 
-    dirAmSul.CreateSubdirectory("Brasil");
-    dirAmSul.CreateSubdirectory("Argentina");
-    dirAmSul.CreateSubdirectory("Paraguai");
-  }
+        dirAmCentral.CreateSubdirectory("Costa Rica");
+        dirAmCentral.CreateSubdirectory("Panama");
+
+        dirAmSul.CreateSubdirectory("Brasil");
+        dirAmSul.CreateSubdirectory("Argentina");
+        dirAmSul.CreateSubdirectory("Paraguai");
+    }
 }
+
+
+
+
+
+
